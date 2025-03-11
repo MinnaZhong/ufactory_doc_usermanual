@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: StartReady
-      link: user_manual/ufactoryStudio/1.preface.html
+      link: zhHans/user_manual/ufactoryStudio/1.preface.html
     - theme: alt
       text: Github
       link: https://github.com/xArm-Developer/ufactory_usermanual
