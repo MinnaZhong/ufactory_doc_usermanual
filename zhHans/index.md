@@ -3,7 +3,7 @@
 layout: home
 hero:
   name: "UFactory Docs"
-  tagline: "What can we help you find"
+  tagline: "我们可以帮你找到什么"
   actions:
     - theme: brand
       text: StartReady
