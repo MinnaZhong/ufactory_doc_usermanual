@@ -25,7 +25,7 @@ __本文以xArm系列为例__
 
 1)通过UFactory Studio调整参数
 
-进入”设置-通用设置-高级设置-参数
+进入"设置-通用设置-高级设置-参数"
 ![image](../assets/13.png)
 
 
@@ -33,7 +33,7 @@ __本文以xArm系列为例__
 
 速度："speed"参数
 
-加速度：“mavacc"参数
+加速度："mavacc"参数
 
 加加速度：set_tcp_jerk() , set_joint_jerk()
 

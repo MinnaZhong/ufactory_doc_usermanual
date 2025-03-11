@@ -6,7 +6,7 @@
 
 ## 1.硬件准备
 
-树莓派4，网线，机械臂，xarm控制器，控制器电缆，机械臂电缆，机械臂通信线
+树莓派4、网线、机械臂、xarm控制器、控制器电缆、机械臂电缆、机械臂通信线。
 
 ## 2.软件准备
 
@@ -34,7 +34,7 @@ xArm 默认网段：192.168.1.xxx
 
 需要满足访问条件：
 
-__1.树莓派 的 wifi IP 和 eth IP 位于不同网段。__
+__1.树莓派 的 wifi IP 和 以太网 IP 位于不同网段。__
 
 __2.机械臂 IP 和以太网 IP 位于同一网段__
 
@@ -49,7 +49,7 @@ __2.机械臂 IP 和以太网 IP 位于同一网段__
 
 例如. cmd ssh [pi@192.168.144](mailto:pi@192.168.144) (SSH piName@pi wifi IP address)
 
-3-修改 eth IP，保存并重启树莓派。
+3-修改 以太网 IP，保存并重启树莓派。
 
 pi@raspberrypi:~ $ sudo nano /etc/dhcpcd.conf
 
@@ -67,6 +67,6 @@ pi@raspberrypi:~ $ sudo nano /etc/dhcpcd.conf
 
 连接方法：
 
-PC 通过 WIFI 访问 树莓派，树莓派通过 eth IP 访问 xArm。 通过这种连接方式，树莓派可以直接 ping通xArm。
+PC 通过 WIFI 访问 树莓派，树莓派通过以太网 IP 访问 xArm。 通过这种连接方式，树莓派可以直接 ping通xArm。
 
 ![image](../assets/17.png)
