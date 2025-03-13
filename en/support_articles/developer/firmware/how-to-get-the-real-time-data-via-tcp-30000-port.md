@@ -64,8 +64,55 @@ while cnt<1000:
     print("counter={},actual_joint_currents={}".format(cnt,actual_joint_currents))
 ```
 
+### 3. C++ Example
+```cpp
+#include "xarm/wrapper/xarm_api.h"
 
-### 3. Parsing Data
+
+int main(int argc, char **argv) {
+  if (argc < 3) {
+    printf("Usage: %s robot_ip report_port(30000)\n", argv[0]);
+    return 0;
+  }
+  std::string robot_ip(argv[1]);
+  int report_port = atoi(argv[2]);
+
+  SocketPort *sock = new SocketPort((char*)robot_ip.c_str(), report_port, 10, 320, 1);
+  if (sock->is_ok() != 0) {
+    fprintf(stderr, "Error: Tcp Report connection failed\n");
+    return -1;
+  }
+
+  int code = 0;
+  int total = 0;
+  float actual_joint_pos[7];
+  float actual_joint_currents[7];
+  unsigned char buf[256];
+  unsigned char *data_fp;
+  while (sock->is_ok() == 0)
+  {
+    if (sock->read_frame(buf) == 0)
+    {
+      data_fp = &buf[4];
+      total = bin8_to_32(data_fp);
+      hex_to_nfp32(&data_fp[116], actual_joint_pos, 7);
+      hex_to_nfp32(&data_fp[200], actual_joint_currents, 7);
+      print_nvect("actual_joint_pos: ", actual_joint_pos, 6);
+      print_nvect("actual_joint_currents:", actual_joint_currents, 7);
+
+    }
+    else {
+      sleep_milliseconds(1);
+    }
+  }
+  printf("sock is disconnect\n");
+
+  return 0;
+}
+
+```
+
+### 4. Parsing Data
 
 * get_joint_angle\_30000.py:  Read actual joint angles via port 30000 and save to joint_pos.csv.
 
