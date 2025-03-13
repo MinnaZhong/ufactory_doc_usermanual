@@ -4,16 +4,16 @@
 
 
 
-## 1-介绍
+## 1.介绍
 
 我们提供 TCP 端口 30000 以实时获取机械臂数据，频率为 250HZ（使用 FT 传感器时为 200HZ） 
 
 下面简要描述如何使用 30000 端口进行数据报告。
 
 [TCP 端口数据说明](data-description-of-tcp-port.md)
-## 2-python示例
+## 2.Python示例
 
-```php
+```python
 '''
 Base on TCP port 30000, 250HZ.
 Firmware version should be 2.1.101 or later.
@@ -67,7 +67,54 @@ while cnt<1000:
     print("counter={},actual_joint_currents={}".format(cnt,actual_joint_currents))
 ```
 
-## 3-获取数据
+## 3.C++示例
+```cpp
+#include "xarm/wrapper/xarm_api.h"
+
+
+int main(int argc, char **argv) {
+  if (argc < 3) {
+    printf("Usage: %s robot_ip report_port(30000)\n", argv[0]);
+    return 0;
+  }
+  std::string robot_ip(argv[1]);
+  int report_port = atoi(argv[2]);
+
+  SocketPort *sock = new SocketPort((char*)robot_ip.c_str(), report_port, 10, 320, 1);
+  if (sock->is_ok() != 0) {
+    fprintf(stderr, "Error: Tcp Report connection failed\n");
+    return -1;
+  }
+
+  int code = 0;
+  int total = 0;
+  float actual_joint_pos[7];
+  float actual_joint_currents[7];
+  unsigned char buf[256];
+  unsigned char *data_fp;
+  while (sock->is_ok() == 0)
+  {
+    if (sock->read_frame(buf) == 0)
+    {
+      data_fp = &buf[4];
+      total = bin8_to_32(data_fp);
+      hex_to_nfp32(&data_fp[116], actual_joint_pos, 7);
+      hex_to_nfp32(&data_fp[200], actual_joint_currents, 7);
+      print_nvect("actual_joint_pos: ", actual_joint_pos, 6);
+      print_nvect("actual_joint_currents:", actual_joint_currents, 7);
+
+    }
+    else {
+      sleep_milliseconds(1);
+    }
+  }
+  printf("sock is disconnect\n");
+
+  return 0;
+}
+```
+
+## 4.解析数据
 
 get_joint_angle_30000.py:  通过端口30000获取实际关节角度并保存为csv文件
 
