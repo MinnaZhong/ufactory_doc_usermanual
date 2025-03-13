@@ -66,48 +66,82 @@ while cnt<1000:
 
 ### 3. C++ Example
 ```cpp
-#include "xarm/wrapper/xarm_api.h"
+#include <iostream>
+#include <vector>
+#include <array>
+#include <cstring>
+#include <arpa/inet.h>
+#include <unistd.h>
 
+float bytesToFloat(const std::array<uint8_t, 4>& bytes, bool isBigEndian = false) {
+    float value;
+    uint32_t intValue = isBigEndian ?
+        (bytes[0] << 24 | bytes[1] << 16 | bytes[2] << 8 | bytes[3]) :
+        (bytes[3] << 24 | bytes[2] << 16 | bytes[1] << 8 | bytes[0]);
+    std::memcpy(&value, &intValue, sizeof(float));
+    return value;
+}
 
-int main(int argc, char **argv) {
-  if (argc < 3) {
-    printf("Usage: %s robot_ip report_port(30000)\n", argv[0]);
+uint32_t bytesToUInt32(const std::array<uint8_t, 4>& bytes) {
+    return (bytes[0] << 24) | (bytes[1] << 16) | (bytes[2] << 8) | bytes[3];
+}
+
+std::vector<float> bytesToFloatList(const std::vector<uint8_t>& data, size_t start, size_t count, bool isBigEndian = false) {
+    std::vector<float> values;
+    for (size_t i = 0; i < count; ++i) {
+        std::array<uint8_t, 4> floatBytes = {data[start + i * 4], data[start + i * 4 + 1], data[start + i * 4 + 2], data[start + i * 4 + 3]};
+        values.push_back(bytesToFloat(floatBytes, isBigEndian));
+    }
+    return values;
+}
+
+int main() {
+    const char* robotIp = "192.168.1.77";
+    const int robotPort = 30000;
+    
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock < 0) {
+        std::cerr << "Failed to create socket" << std::endl;
+        return -1;
+    }
+    
+    sockaddr_in serverAddr{};
+    serverAddr.sin_family = AF_INET;
+    serverAddr.sin_port = htons(robotPort);
+    inet_pton(AF_INET, robotIp, &serverAddr.sin_addr);
+    
+    if (connect(sock, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) < 0) {
+        std::cerr << "Connection failed" << std::endl;
+        close(sock);
+        return -1;
+    }
+    
+    std::vector<uint8_t> buffer(4);
+    if (recv(sock, buffer.data(), 4, 0) < 4) {
+        std::cerr << "Failed to receive size data" << std::endl;
+        close(sock);
+        return -1;
+    }
+    
+    uint32_t size = bytesToUInt32({buffer[0], buffer[1], buffer[2], buffer[3]});
+    buffer.resize(size);
+    
+    int cnt = 0;
+    while (cnt < 1000) {
+        ssize_t received = recv(sock, buffer.data(), size, 0);
+        if (received < size) continue;
+        
+        cnt++;
+        std::vector<float> actualJointCurrents = bytesToFloatList(buffer, 200, 7);
+        std::cout << "Counter=" << cnt << ", actual_joint_currents=[";
+        for (size_t i = 0; i < actualJointCurrents.size(); ++i) {
+            std::cout << actualJointCurrents[i] << (i < actualJointCurrents.size() - 1 ? ", " : "");
+        }
+        std::cout << "]" << std::endl;
+    }
+    
+    close(sock);
     return 0;
-  }
-  std::string robot_ip(argv[1]);
-  int report_port = atoi(argv[2]);
-
-  SocketPort *sock = new SocketPort((char*)robot_ip.c_str(), report_port, 10, 320, 1);
-  if (sock->is_ok() != 0) {
-    fprintf(stderr, "Error: Tcp Report connection failed\n");
-    return -1;
-  }
-
-  int code = 0;
-  int total = 0;
-  float actual_joint_pos[7];
-  float actual_joint_currents[7];
-  unsigned char buf[256];
-  unsigned char *data_fp;
-  while (sock->is_ok() == 0)
-  {
-    if (sock->read_frame(buf) == 0)
-    {
-      data_fp = &buf[4];
-      total = bin8_to_32(data_fp);
-      hex_to_nfp32(&data_fp[116], actual_joint_pos, 7);
-      hex_to_nfp32(&data_fp[200], actual_joint_currents, 7);
-      print_nvect("actual_joint_pos: ", actual_joint_pos, 7);
-      print_nvect("actual_joint_currents:", actual_joint_currents, 7);
-
-    }
-    else {
-      sleep_milliseconds(1);
-    }
-  }
-  printf("sock is disconnect\n");
-
-  return 0;
 }
 
 ```
