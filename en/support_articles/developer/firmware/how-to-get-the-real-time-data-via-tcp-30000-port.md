@@ -97,7 +97,7 @@ int main(int argc, char **argv) {
       total = bin8_to_32(data_fp);
       hex_to_nfp32(&data_fp[116], actual_joint_pos, 7);
       hex_to_nfp32(&data_fp[200], actual_joint_currents, 7);
-      print_nvect("actual_joint_pos: ", actual_joint_pos, 6);
+      print_nvect("actual_joint_pos: ", actual_joint_pos, 7);
       print_nvect("actual_joint_currents:", actual_joint_currents, 7);
 
     }
