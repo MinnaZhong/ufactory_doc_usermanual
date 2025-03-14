@@ -9,8 +9,8 @@ UFactory version: V2.4.0+
 
 
 
-*  If you haven't used the arm for a long time(≥3 months) and encounter S17 error, please follow the steps below to clear it.
-*  If you encounter S17 error when you receive the arm,  please take a screenshot of the error page and contact [support@ufactory.cc](mailto:support@ufactory.cc)
+*  If you're using the arm ≤1303 version, please follow the steps below to clear it.
+*  If you're using 850,Lite6, xArm≥1304 version,  please take a screenshot of the error page and contact [support@ufactory.cc](mailto:support@ufactory.cc)
 
 
 
