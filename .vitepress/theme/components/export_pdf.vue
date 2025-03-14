@@ -1,10 +1,33 @@
 <script setup>
 import { useData, useRoute } from 'vitepress';
 import {  onMounted, ref, watch} from 'vue';
-import qs from "query-string";
 import {  FileDown } from "lucide-vue-next";
 
 
+// pdf路由映射
+const PDF_ROUTE_MAP = {
+  "6_Axis_Force_Torque_Sensor":{
+    "en-US": "pdf地址",
+    "zh-CN": "",
+  },
+  "Bio_Gripper":{
+    "en-US": "",
+    "zh-CN": "",
+  },
+
+  "Linear_Motor":{
+    "en-US": "",
+    "zh-CN": "",
+  },
+  "xArm_Gripper":{
+    "en-US": "",
+    "zh-CN": "",
+  },
+  "xArm_Vacuum_Gripper":{
+    "en-US": "",
+    "zh-CN": "",
+  },
+}
 
 
 // 控制按钮显示
@@ -23,22 +46,6 @@ watch(() => data.lang, (data) => {
 
 
 onMounted(() => {
-  watch(() => route.path, () => {
-    const params = qs.parse(window.location.search)
-    if ("export" in params && params.export === '1') {
-      document.querySelector(".VPSidebar").remove()
-      document.querySelector(".VPLocalNav").remove()
-      document.querySelector(".VPNav").remove()
-      document.querySelector(".VPDoc>.container>.aside").remove()
-      document.querySelector(".VPDocFooter").remove()
-
-      let VPContent =  document.querySelector(".VPContent")
-      VPContent.style.padding = "0px"
-
-      return
-    }
-  }, { deep: true , immediate: true});
-
   // 只在首页和文档页面显示按钮
   if (window.location.pathname !== '/' && !window.location.pathname.startsWith('/')) {
     showButton.value = false;
@@ -47,13 +54,15 @@ onMounted(() => {
   }
 });
 
-function onOpenModal() {
-  // 根据当前语言跳中文转到https://www.cn.ufactory.cc/xarm-download， 英文跳转到https://www.ufactory.cc/download/
-  if (!isEnglish.value) {
-    window.open("https://www.cn.ufactory.cc/xarm-download")
-  } else {
-    window.open("https://www.ufactory.cc/download/")
-  }
+function onOpenPdf() {
+  Object.keys(PDF_ROUTE_MAP).forEach((key) => {
+    if (route.path.includes("/" + key + "/")) {
+      const url = PDF_ROUTE_MAP[key][data.lang.value];
+      if (url) {
+        window.open(url);
+      }
+    }
+  });
 }
 
 </script>
@@ -61,7 +70,7 @@ function onOpenModal() {
 
   <div class="export-btn">
     <!-- 根据 showButton 的值来控制按钮是否显示 -->
-    <button v-if="showButton" @click="onOpenModal" class="export-pdf-button" >
+    <button v-if="showButton" @click="onOpenPdf" class="export-pdf-button" >
       <FileDown />
       {{isEnglish ? "Download PDF" :"PDF下载"}}
     </button>
