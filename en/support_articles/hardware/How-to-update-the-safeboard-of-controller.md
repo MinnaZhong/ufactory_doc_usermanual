@@ -1,8 +1,8 @@
-# How to update the SafeBoard of controller?
+# How to update the SafeBoard of the controller?
 
 ## Hardware
 Controller: 
-* AC300
+* AC1300
 * AC1304
 * DC13xx
 * MC13xx
@@ -14,7 +14,7 @@ Controller:
 ## Download
 [xarm-tool-gui-2.16.10.zip](https://drive.google.com/drive/folders/1m96yfoUb2SrXt25c-ClZ6JqEgjaukS7e)
 
-## How to check the SafeBoard Vesrion?
+## How to check the SafeBoard Version?
 Launch xarm-tool-gui, enter the <u>Robot IP</u> and click <u>Connect</u>.
 ![](../assets/safeboard_en_1.jpg)
 
