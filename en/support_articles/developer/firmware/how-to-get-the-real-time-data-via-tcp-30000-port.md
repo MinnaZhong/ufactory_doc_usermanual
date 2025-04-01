@@ -275,7 +275,7 @@ Example:
 
 Result:
 
-![](../../assets/image(59).png)
+![](../../assets/joint_angles_diagram.png)
 
 
 
