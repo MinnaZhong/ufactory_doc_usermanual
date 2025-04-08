@@ -11,8 +11,8 @@ const PDF_ROUTE_MAP = {
     "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_c45b72ffe8b44074ab44a500a63591fd.pdf",
   },
   "Bio_Gripper":{
-    "en-US": "https://www.ufactory.cc/wp-content/uploads/2025/04/BIO-Gripper-G2-User-Manual-V2.6.0.pdf",
-    "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_6649c39c6137474189235657766bd691.pdf",
+    "en-US": "",
+    "zh-CN": "",
   },
 
   "Linear_Motor":{
@@ -20,7 +20,7 @@ const PDF_ROUTE_MAP = {
     "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_75b0c669a3f14963a38b100400716c63.pdf",
   },
   "xArm_Gripper":{
-    "en-US": "https://www.ufactory.cc/wp-content/uploads/2025/04/xArm-Vacuum-Gripper-User-Manual-V2.5.2.pdf",
+    "en-US": "https://www.ufactory.cc/wp-content/uploads/2023/11/xArm-Gripper-User-Manual-V2.2.0.pdf",
     "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_f9ede1a3f60e46eb9cb385d1e5748414.pdf",
   },
   "xArm_Vacuum_Gripper":{
