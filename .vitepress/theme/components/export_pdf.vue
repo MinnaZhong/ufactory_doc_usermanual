@@ -20,12 +20,12 @@ const PDF_ROUTE_MAP = {
     "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_75b0c669a3f14963a38b100400716c63.pdf",
   },
   "xArm_Gripper":{
-    "en-US": "https://www.ufactory.cc/wp-content/uploads/2023/11/xArm-Gripper-User-Manual-V2.2.0.pdf",
+    "en-US": "https://www.ufactory.cc/wp-content/uploads/2025/04/xArm-Vacuum-Gripper-User-Manual-V2.5.2.pdf",
     "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_f9ede1a3f60e46eb9cb385d1e5748414.pdf",
   },
   "xArm_Vacuum_Gripper":{
     "en-US": "https://www.ufactory.cc/wp-content/uploads/2023/04/xArm-Vacuum-Gripper-User-Manual-V1.6.1.pdf",
-    "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_519da70ad996452badbf6af74aa4a3f7.pdf",
+    "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_d1bb14ad508243e1bac6b812cbdffd90.pdf",
   },
 }
 
