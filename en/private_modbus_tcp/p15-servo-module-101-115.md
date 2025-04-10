@@ -42,7 +42,7 @@
 >
 > //00       U8, State
 >
-> //00       U8, Paramter 1, command execution status
+> //00       U8, Parameter 1, command execution status
 >
 > ** 0: Normal.
 >
@@ -50,37 +50,37 @@
 >
 > ** 3: Communication failure.
 >
-> //00       U8, Paramter 2, Joint 1 servo state=Normal
+> //00       U8, Parameter 2, Joint 1 servo state=Normal
 >
-> //00       U8, Paramter 3, Joint 1 servo error code=Normal
+> //00       U8, Parameter 3, Joint 1 servo error code=Normal
 >
-> //00       U8, Paramter 4, Joint 2 servo state=Normal
+> //00       U8, Parameter 4, Joint 2 servo state=Normal
 >
-> //00       U8, Paramter 5, Joint 2 servo error code=Normal
+> //00       U8, Parameter 5, Joint 2 servo error code=Normal
 >
-> //00       U8, Paramter 6, Joint 3 servo state=Normal
+> //00       U8, Parameter 6, Joint 3 servo state=Normal
 >
-> //00       U8, Paramter 7, Joint 3 servo error code=Normal
+> //00       U8, Parameter 7, Joint 3 servo error code=Normal
 >
-> //00       U8, Paramter 8, Joint 4 servo state=Normal
+> //00       U8, Parameter 8, Joint 4 servo state=Normal
 >
-> //00       U8, Paramter 9, Joint 4 servo error code=Normal
+> //00       U8, Parameter 9, Joint 4 servo error code=Normal
 >
-> //00       U8, Paramter 10, Joint 5 servo state=Normal
+> //00       U8, Parameter 10, Joint 5 servo state=Normal
 >
-> //00       U8, Paramter 11, Joint 5 servo error code=Normal
+> //00       U8, Parameter 11, Joint 5 servo error code=Normal
 >
-> //00       U8, Paramter 12, Joint 6 servo state=Normal
+> //00       U8, Parameter 12, Joint 6 servo state=Normal
 >
-> //00       U8, Paramter 13, Joint 6 servo error code=Normal
+> //00       U8, Parameter 13, Joint 6 servo error code=Normal
 >
-> //00       U8, Paramter 14, Joint 7 servo state=Normal
+> //00       U8, Parameter 14, Joint 7 servo state=Normal
 >
-> //00       U8, Paramter 15, Joint 7 servo error code=Normal
+> //00       U8, Parameter 15, Joint 7 servo error code=Normal
 >
-> //00       U8, Paramter 16, Gripper servo state=Normal
+> //00       U8, Parameter 16, Gripper servo state=Normal
 >
-> //00       U8, Paramter 17, Gripper servo error code=Normal
+> //00       U8, Parameter 17, Gripper servo error code=Normal
 >
 
 

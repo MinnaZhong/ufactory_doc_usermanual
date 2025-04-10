@@ -147,11 +147,8 @@ C35 Set the boundary range of the safety fence in the three-dimensional space. I
 
 
 
-
-> Response Description
-
-
 ```
+Response Description
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 51    U16, Length 
@@ -1117,7 +1114,7 @@ It needs to be parsed according to different registers
 >
 > //00       U8, 
 >
-> value of theoretical joint torque)
+> value of theoretical joint torque
 >
 > 0: value of theoretical joint torque, unit : Nm
 >

@@ -50,7 +50,7 @@
 
 ## Set the maximum acceleration of the Cartesian space translation
 
-R**egister:32 (0x20)**
+**Register:32 (0x20)**
 
 ```
 // Request:

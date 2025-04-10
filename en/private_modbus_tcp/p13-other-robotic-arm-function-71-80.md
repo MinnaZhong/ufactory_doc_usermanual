@@ -228,46 +228,62 @@ Given two coordinate points of the robotic arm, the offset coordinate between th
 ```
 
 
-> Request Description
-> //00 01    U16, Transaction ID<br>
+> Request Description</br>
+> //00 01    U16, Transaction ID
+> 
 > //00 02    U16, Protocol Identifier
+> 
 > //00 0E    U16, Length((2+x*4)) 
+> 
 > //4E       U8, Register
-> //00 00 A0 41    
+> 
+> //00 00 A0 41  
+> 
 > //00 00 F0 41
+> 
 > //00 00 48 42    3*FP32,
-> Parameter 1 (Geometric model is a cuboid)
-> x=20,y=30,z=50
+> 
+> Parameter 1 (Geometric model is a cuboid): x=20,y=30,z=50
+> 
 > Additional definition parameter area: x maximum is 6, the actual length depends on the number of parameters required by the tool type definition. 
 > If there is no parameter, there is no data here.
 >
-> End tool type:
-> 1) Custom detection model (additional parameters are required):
-> *Cylinder:
-> Additional definition parameters are: 
+> **End tool type:**
+> 
+> 1)Custom detection model (additional parameters are required):
+> 
+> **Cylinder:**
+> Additional definition parameters are:
 > radius (mm), height (mm)
-> *Cuboid:
+> 
+> **Cuboid:**
 > Additional definition parameters are: 
 > length[x(mm)] ,width[y(mm)], height[z(mm)] consistent with the direction of the default TCP coordinate system.
 >
-> 2) Supported detection models (no need to define additional parameters):
+> 2)Supported detection models (no need to define additional parameters):
+> 
 > No end tool, xArm gripper, xArm vacuum gripper, xArm BIO gripper, Robotiq 2F-85 gripper, Robotiq 2F-140 gripper.
 >
-> //16    U8, 
-> Parameter 2 
-> (end tool type number = 22)
-> End tool type number:
+> //16    U8, Parameter 2 (end tool type number = 22)
+> 
+> **End tool type number:**
+> 
 > 1)Custom detection models (additional parameters are required):
-> Cylinder: 21
-> Cuboid: 22
+> Cylinder: 21  Cuboid: 22
 >
-> 2) Supported detection models (no need to define additional parameters):
+> 2)Supported detection models (no need to define additional parameters):
 > No end tools: 0
+> 
 > xArm gripper: 1
+> 
 > xArm vacuum gripper: 2
+> 
 > xArm BIO gripper: 3
+> 
 > Robotiq 2F-85 gripper: 4
+> 
 > Robotiq 2F-140 gripper: 5
+> 
 
 
 
