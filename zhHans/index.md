@@ -49,13 +49,14 @@ features:
     link: http://docs.accessories.ufactory.cc/zhHans/6_Axis_Force_Torque_Sensor/1.General_Presentation.html
     target: _self
     details:  六维力矩传感器、BIO机械爪G2、直线滑轨、xArm机械爪、xArm真空吸头
-    - title: UFACTORY 850硬件手册
+  - title: UFACTORY 850硬件手册
     icon: 
       src: /assets/support_article.svg
       width: 400
       height: 400
-      alt: ufactory 850
+      alt: xArm Accessories
     link: zhHans/user_manual/ufactoryStudio/1.preface.html
     target: _self
     details:  UFACTORY 850硬件手册
+
 ---
