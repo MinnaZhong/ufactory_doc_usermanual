@@ -33,7 +33,7 @@ features:
     details: 技术支持文档.
   - title: API
     icon: 
-      src: /assets/release_note.svg
+      src: /assets/api.svg
       width: 400
       height: 400
       alt: Release Note
@@ -51,7 +51,7 @@ features:
     details:  六维力矩传感器、BIO机械爪G2、直线滑轨、xArm机械爪、xArm真空吸头
   - title: UFACTORY 850硬件手册
     icon: 
-      src: /assets/support_article.svg
+      src: /assets/robot.svg
       width: 400
       height: 400
       alt: xArm Accessories
