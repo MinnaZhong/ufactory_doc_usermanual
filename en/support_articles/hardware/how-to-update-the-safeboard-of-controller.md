@@ -2,7 +2,7 @@
 
 ## Hardware
 Controller: 
-* AC1300
+* AC1303
 * AC1304
 * DC13xx
 * MC13xx
