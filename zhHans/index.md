@@ -11,9 +11,9 @@ hero:
 
 
 features:
-  - title: 用户手册
+  - title: UFACTORY Studio用户手册
     icon: 
-      src: /assets/support_article_1.svg
+      src: /assets/studio.svg
       width: 400
       height: 400
       alt: User Manual
@@ -21,7 +21,7 @@ features:
     details: UFACTORY Studio user manual
   - title: 技术支持文档
     icon: 
-      src: /assets/support_article_1.svg
+      src: /assets/support_article.svg
       width: 400
       height: 400
       alt: Support Article
@@ -39,7 +39,7 @@ features:
     details: Python SDK, WebSocket API, Gcode, Modbus TCP, Private TCP, Release Note
   - title: xArm配件用户手册
     icon: 
-      src: /assets/support_article_1.svg
+      src: /assets/accessories.svg
       width: 400
       height: 400
       alt: xArm Accessories
@@ -48,12 +48,29 @@ features:
     details:  六维力矩传感器、BIO机械爪G2、直线滑轨、xArm机械爪、xArm真空吸头
   - title: UFACTORY 850硬件手册
     icon: 
-      src: /assets/robot_1.svg
+      src: /assets/850.svg
       width: 400
       height: 400
       alt: xArm Accessories
     link: http://docs.850.ufactory.cc/zhHans/1.safety.html
     target: _self
     details:  UFACTORY 850硬件手册
-
+  - title: xArm硬件手册
+    icon: 
+      src: /assets/xarm.svg
+      width: 400
+      height: 400
+      alt: xArm Accessories
+    link: http://docs.850.ufactory.cc/zhHans/1.safety.html
+    target: _self
+    details:  xArm硬件手册
+  - title: Lite6硬件手册
+    icon: 
+      src: /assets/lite6.svg
+      width: 400
+      height: 400
+      alt: xArm Accessories
+    link: http://docs.850.ufactory.cc/zhHans/1.safety.html
+    target: _self
+    details:  Lite6硬件手册
 ---
