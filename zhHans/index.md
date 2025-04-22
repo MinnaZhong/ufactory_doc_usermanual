@@ -18,7 +18,7 @@ features:
       height: 400
       alt: User Manual
     link: user_manual/ufactoryStudio/1.preface.html
-    details: UFACTORY Studio user manual
+    details: UFACTORY Studio用户手册
   - title: 技术支持文档
     icon: 
       src: /assets/support_article.svg
