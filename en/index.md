@@ -14,9 +14,9 @@ hero:
 
 
 features:
-  - title: User Manual
+  - title: UFACTORY Studio User Manual
     icon: 
-      src: /assets/support_article_1.svg
+      src: /assets/studio.svg
       width: 400
       height: 400
       alt: User Manual
@@ -24,7 +24,7 @@ features:
     details: UFACTORY Studio user manual
   - title: Support Article
     icon: 
-      src: /assets/support_article_1.svg
+      src: /assets/support_article.svg
       width: 400
       height: 400
       alt: Support Article
@@ -42,23 +42,40 @@ features:
     details: Python SDK, WebSocket API, Gcode, Modbus TCP, Private TCP, Release Note
   - title: xArm Accessories
     icon: 
-      src: /assets/support_article_1.svg
+      src: /assets/accessories.svg
       width: 400
       height: 400
       alt: xArm Accessories
     link: http://docs.accessories.ufactory.cc/6_Axis_Force_Torque_Sensor/1.Introduction.html
     target: _self
     details: UFACTORY xArm Accessories user manual
-  - title: 850 User Manual
+  - title: 850 Hardware Manual
     icon: 
-      src: /assets/robot_1.svg
+      src: /assets/850.svg
       width: 400
       height: 400
-      alt: xArm Accessories
+      alt: 850 Hardware Manual
     link: https://docs.850.ufactory.cc/1.safety.html
     target: _self
-    details: UFACTORY 850 user manual
-    
+    details: UFACTORY 850 Hardware Manual
+  - title: xArm Hardware Manual
+    icon: 
+      src: /assets/xarm.svg
+      width: 400
+      height: 400
+      alt: xArm Hardware Manual
+    link: https://docs.850.ufactory.cc/1.safety.html
+    target: _self
+    details: xArm Hardware Manual
+  - title: Lite6 Hardware Manual
+    icon: 
+      src: /assets/lite6.svg
+      width: 400
+      height: 400
+      alt: Lite6 Hardware Manual
+    link: https://docs.850.ufactory.cc/1.safety.html
+    target: _self
+    details: Lite6 Hardware Manual 
     
 ---
 
