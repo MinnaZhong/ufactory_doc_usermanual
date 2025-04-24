@@ -1,3 +1,5 @@
+# V2.6.0 New Feature
+
 ## Live Control - Quick Input
 Feature Description
 * Used for quickly inputting joint angles or TCP pose data, supporting both numerical and array inputs.
