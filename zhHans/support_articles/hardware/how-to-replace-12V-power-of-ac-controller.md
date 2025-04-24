@@ -1,6 +1,7 @@
 # 如何更换AC控制器的12V电源
 
 12V电源型号：MEAN WELL LRS-50-12 
+![](../assets/12vpower.jpg)
 
 1. 请参考视频将控制器拆开。
 [如何拆开AC控制器?](https://drive.google.com/drive/folders/1LiDyIoOXd-MtC4zW8miXUTSSDuxyNhir?usp=sharing)
