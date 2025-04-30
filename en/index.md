@@ -61,7 +61,7 @@ features:
       width: 400
       height: 400
       alt: xArm Hardware Manual
-    link: https://docs.850.ufactory.cc/1.safety.html
+    link: https://docs.xarm.ufactory.cc/1.safety.html
     target: _self
     details: xArm Hardware Manual
   - title: Lite6 Hardware Manual
@@ -70,7 +70,7 @@ features:
       width: 400
       height: 400
       alt: Lite6 Hardware Manual
-    link: https://docs.850.ufactory.cc/1.safety.html
+    link: https://docs.lite6.ufactory.cc/1.safety.html
     target: _self
     details: Lite6 Hardware Manual 
   - title: Release Note
