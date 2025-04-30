@@ -75,7 +75,7 @@ const vitePressI18nConfig: any = {
         level: [2, 4]
       },
       editLink: {
-        pattern: `https://github.com/xArm-Developer/ufactory_doc_usermanual/tree/ufactory_doc_usermanual/:path`,
+        pattern: `https://github.com/xArm-Developer/ufactory_doc_usermanual/tree/ufactory_doc_releasenote/:path`,
       }
     },
     zhHans: {
@@ -94,7 +94,7 @@ const vitePressI18nConfig: any = {
         level: [2, 4]
       },
       editLink: {
-        pattern: `https://github.com/xArm-Developer/ufactory_doc_usermanual/tree/ufactory_doc_usermanual/:path`,
+        pattern: `https://github.com/xArm-Developer/ufactory_doc_usermanual/tree/ufactory_doc_releasenote/:path`,
       }
     },
     socialLinks: [
