@@ -53,9 +53,9 @@ const vitePressI18nConfig: any = {
   rootLocale: defaultLocale,
   searchProvider: 'local',
   description: {
-    en: 'Documentation for UFACTORY products. It covers user manual, API documentation, support articles and frequently asked questions (FAQs).',
+    en: 'Documentation for UFACTORY products. It covers UFACTORY Studio user manual, hardware manual, API documentation, support articles, and release notes.',
     zhHans:
-      'UFACTORY中文文档库，包括用户手册，API手册，技术支持文章，FAQ。'
+      'UFACTORY中文文档库，包括UFACTORY Studio用户手册，机械臂硬件手册，API手册，技术支持文章，升级记录。'
   },
   themeConfig: {
     en: {
@@ -74,6 +74,9 @@ const vitePressI18nConfig: any = {
         label: 'On this Page',
         level: [2, 4]
       },
+      editLink: {
+        pattern: `https://github.com/xArm-Developer/ufactory_doc_usermanual/tree/ufactory_doc_usermanual/:path`,
+      }
     },
     zhHans: {
       nav: [
@@ -90,6 +93,9 @@ const vitePressI18nConfig: any = {
         label: '页面导航',
         level: [2, 4]
       },
+      editLink: {
+        pattern: `https://github.com/xArm-Developer/ufactory_doc_usermanual/tree/ufactory_doc_usermanual/:path`,
+      }
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/xArm-Developer/ufactory_usermanual' }
