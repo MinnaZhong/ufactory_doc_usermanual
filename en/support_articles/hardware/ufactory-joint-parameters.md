@@ -1,3 +1,5 @@
+# UFACTORY Joint Parameters
+
 ## Lite 6  
 
 | Joint | Torque Constant (N·m/A) | Rated Torque (N·m) | Overload Limit | Gear Ratio | Max Torque (N·m) |

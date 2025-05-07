@@ -31,8 +31,8 @@ const commonSidebarConfig: any = {
   useTitleFromFrontmatter: true,
   useFolderTitleFromIndexFile: true,
   // frontmatterOrderDefaultValue: 9, // For 'CHANGELOG.md'
-  // sortMenusByFrontmatterOrder: true,
-  sortMenusOrderNumericallyFromLink: true,
+  sortMenusByFrontmatterOrder: true,
+  // sortMenusOrderNumericallyFromLink: true,
 };
 
 const vitePressSidebarConfig = [

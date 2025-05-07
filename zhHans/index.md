@@ -8,3 +8,4 @@
     You will be redirected to <a href="https://docs.ufactory.cc/zhHans/">https://docs.ufactory.cc/zhHans/</a> shortly.
 </body>
 </html>
+

@@ -1,4 +1,4 @@
 ---
-title: 固件
+title: Firmware
 order: 1
 ---
