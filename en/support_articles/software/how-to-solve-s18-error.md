@@ -11,19 +11,22 @@ Please note that if the arm is not used for a long time(**≥3 months**), you ne
 
 ![](../assets/S18.png)
 
-### Status code=0:
+### Status code = 0/8:
 
-There is a status code of S18 error. If the status code is 0, please enter 'Settings-General-Debugging Tools-Joint', enter '**H101D0813V256I\***', and send. **Press down the E stop button, wait for 10 seconds, and then release.**
+If the status code is 0 or 8:
+* Enter 'Settings-General-Debugging Tools-Joint';
+* Enter '**H101D0813V256I\***', and send;
+* Press down the E stop button, **wait for 10 seconds**, and then release.
 
-* stands for joint ID, can be 1-7.
 
+(*)stands for joint ID, can be 1-7.  
 For example, H101D0813V256I3.
 
 ![](../assets/S18_2.png)
 
 
 
-### Status code≠0:
+### Status code ≠ 0/8:
 
 Please provide the SN of the robot, and take a screenshot of the error page to <[support@ufactory.cc](mailto:support@ufactory.cc)>.
 
