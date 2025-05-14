@@ -112,7 +112,7 @@ Replace `192.168.1.xxx` with the IP address of the controller.
 
 ## 7. License
 
-This project is licensed under the **BSD 3-Clause License**. For details, please check the [LICENSE](LICENSE) file.
+This project is licensed under the **BSD 3-Clause License**. For details, please check the [LICENSE](https://github.com/xArm-Developer/ufactory_vision/blob/main/LICENSE) file.
 
 ## 8. Reference
 
