@@ -1,4 +1,4 @@
-# ufactory_vision
+# ufactory视觉演示
 
 ## 1. 项目概述
 
@@ -104,7 +104,7 @@ python run_depthai_grasp.py 192.168.1.xxx
 
 ## 7. 许可证
 
-本项目采用 **BSD 3-Clause 许可证**。详情请查看 [LICENSE](LICENSE) 文件。
+本项目采用 **BSD 3-Clause 许可证**。详情请查看 [LICENSE](https://github.com/xArm-Developer/ufactory_vision/blob/main/LICENSE) 文件。
 
 ## 8. 参考
 
