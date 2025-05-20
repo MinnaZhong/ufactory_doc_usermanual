@@ -61,6 +61,10 @@ const vitePressI18nConfig: any = {
     en: {
       nav: [
         {
+          text: 'Home',
+          link: 'https://docs.ufactory.cc/'
+        },
+        {
           text: 'Official Website',
           link: 'https://ufactory.cc'
         },
@@ -80,6 +84,10 @@ const vitePressI18nConfig: any = {
     },
     zhHans: {
       nav: [
+        {
+          text: '回到首页',
+          link: 'https://docs.ufactory.cc/zhHans/'
+        },
         {
           text: '官方网站',
           link: 'https://cn.ufactory.cc'
