@@ -40,7 +40,7 @@ const footerTemplate = `<div style="margin-bottom: -0.4cm; height: 70%; width: 1
 
 
 const configs = defineUserConfig({
-  outFile: 'ufactory_docs_zh.pdf',
+  outFile: 'xArm硬件手册(1305).pdf',
   outDir: './.vitepress/dist/pdf',
   puppeteerLaunchOptions: {
     args: ['--no-sandbox']
