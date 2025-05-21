@@ -3,7 +3,7 @@
 
 xarm7的运动学和动力学参数
 
-**1.修改DH参数**
+**1.改进DH参数**
 
 ![image](../../assets/xarm7_modified_DH_and_dynamics.png)
 
