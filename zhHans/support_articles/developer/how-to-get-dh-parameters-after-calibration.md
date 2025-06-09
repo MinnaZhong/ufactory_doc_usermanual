@@ -76,8 +76,11 @@ if __name__ == '__main__':
 ```
 
 ### 获取参数文件
-```python
+
 python gen_kinematics_params.py {robot_ip} {kinematics_suffix}
+
+```python
+python gen_kinematics_params.py 192.168.1.212 ip212
 ```
 
 - **robot_ip** 表示机械臂IP，需要连接机械臂获取实际的参数
