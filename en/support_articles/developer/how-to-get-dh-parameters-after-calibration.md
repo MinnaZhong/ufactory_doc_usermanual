@@ -78,8 +78,10 @@ if __name__ == '__main__':
 ```
 
 ### Generation of Kinematics parameter file
-```python
 python gen_kinematics_params.py {robot_ip} {kinematics_suffix}
+
+```python
+python gen_kinematics_params.py 192.168.1.212 ip212
 ```
 
 - **robot_ip** represents the IP of the robot arm. You need to connect to the robot arm to obtain the actual parameters.
