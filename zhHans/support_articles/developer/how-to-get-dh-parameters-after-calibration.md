@@ -80,8 +80,8 @@ if __name__ == '__main__':
 python gen_kinematics_params.py {robot_ip} {kinematics_suffix}
 ```
 
-- robot_ip表示机械臂IP，需要连接机械臂获取实际的参数
-- kinematics_suffix表示生成的参数文件的后缀，如果成功，会在python同目录下生成配置文件, 假如 kinematics_suffix 为 AAA, 那么对应的文件名如下:
+- **robot_ip** 表示机械臂IP，需要连接机械臂获取实际的参数
+- **kinematics_suffix** 表示生成的参数文件的后缀，如果成功，会在python同目录下生成配置文件, 假如 kinematics_suffix 为 AAA, 那么对应的文件名如下:
   - **xarm5:** user/xarm5_kinematics_AAA.yaml
   - **xarm6:** user/xarm6_kinematics_AAA.yaml
   - **xarm7:** user/xarm7_kinematics_AAA.yaml
