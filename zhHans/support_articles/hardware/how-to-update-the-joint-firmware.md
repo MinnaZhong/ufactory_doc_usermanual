@@ -14,7 +14,7 @@
 
 
 ## 如何更新关节固件版本？
-1. 下载xarm-tool-gui并运行。
+1. 下载xarm-tool-gui并运行。  
 Windows版本：[xarm-tool-gui-2.17.1](http://update.ufactory.cc/xarm-tool-gui-win-amd64-2.17.1.zip)   
 
 2. 切换到对应的<u>测试工具</u>，勾选<u>所有关节驱动板</u>，点击<u>安装驱动</u>，拍下急停按钮并松开，点击<u>下一步</u>。  
@@ -23,6 +23,7 @@ Windows版本：[xarm-tool-gui-2.17.1](http://update.ufactory.cc/xarm-tool-gui-w
 * **Lite6:** Lite6测试工具
 ![](../assets/joint_firmware_3.png)
 * **xArm12xx或更低版本:** 1200测试工具
+![](../assets/joint_firmware_4.jpg)
 
-1. 等待2-3分钟，软件提示更新成功或失败。安装成功，按下<u>确定</u>按钮，手臂会自动重启，等待1-2分钟后，重新连接xarm-tool-gui，使能手臂，查看关节固件版本。
+3. 等待2-3分钟，软件提示更新成功或失败。安装成功，按下<u>确定</u>按钮，手臂会自动重启，等待1-2分钟后，重新连接xarm-tool-gui，使能手臂，查看关节固件版本。
 ![](../assets/joint_firmware_4.png)
