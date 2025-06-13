@@ -1,14 +1,14 @@
-# How to update the end io board firmware?
+# How to update the end IO board firmware?
 
 ## Download
 - Windows: [xarm-tool-gui-win-amd64-2.17.1](https://drive.google.com/drive/folders/19qFJlldeSs_SH1UTjnMnNToeXC-BqS-N?usp=sharing)
 
-## How to check the end io board version?
+## How to check the end IO board version?
 Launch xarm-tool-gui, enter the <u>Robot IP</u> and click <u>Connect</u>.
 As shown in the figure below, the IO Board version is V2.6.0.
 ![](../assets/endio_board_1.png)
 
-### Mapping of end io firmware to robot
+### Mapping of end IO firmware to robot
 
 | Robot Arm Model            | End IO Board File                      | Version Number |
 | -------------------------- | -------------------------------------- | -------------- |
@@ -17,7 +17,7 @@ As shown in the figure below, the IO Board version is V2.6.0.
 | xArm1305 or 850            | xArmEndIOApp_V3.1.2_debug_20240927     | V3.1.x         |
 
 
-## how to update the end io firmware?
+## How to update the end IO firmware?
 1. Connect with xarm-tool-gui.
 2. Switch to the corresponding test tool, choose <u>End IO driver board</u>,click <u>install driver</u>, choose the corresponding bin file. Press down the Emergency stop button and release, click <u>Next</u>.
 * **1305 or 850:** 1300/850 Test tool
