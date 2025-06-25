@@ -14,7 +14,7 @@ Controller:
 * If the safeboard is not V4.6.10, no need to do the update.
 
 ## Download
-[xarm-tool-gui-2.16.10.zip](https://drive.google.com/drive/folders/1m96yfoUb2SrXt25c-ClZ6JqEgjaukS7e)
+[xarm-tool-gui-2.16.10.zip](https://drive.google.com/drive/folders/1m96yfoUb2SrXt25c-ClZ6JqEgjaukS7e?usp=sharing)
 
 ## How to check the SafeBoard Version?
 Launch xarm-tool-gui, enter the <u>Robot IP</u> and click <u>Connect</u>.
