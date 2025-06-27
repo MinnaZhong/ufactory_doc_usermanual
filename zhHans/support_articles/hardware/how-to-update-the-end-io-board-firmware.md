@@ -4,7 +4,7 @@
 运行xarm-tool-gui，输入控制器IP，点击连接，驱动板版本即可关节固件版本，如下图，驱动板版本为V2.6.0。
 ![](../assets/endio_board_1.png)
 
-### 不同手臂对应关末端IO版本
+## 不同手臂对应关末端IO版本
 
 
 | 机械臂型号                 | 末端IO板固件示例                              | 末端板版本  |
@@ -13,12 +13,11 @@
 | xArm1300~1304版本或Lite6 | xArmEndIOApp_V2.6.0_debug_20230811.bin | V2.6.x |
 | xArm1305版本或850        | xArmEndIOApp_V3.1.2_debug_20240927.bin     | V3.1.x |
 
-
+## 下载
+* Windows版本：[xarm-tool-gui-2.17.1](https://update.ufactory.cc/xarm-tool-gui-win-amd64-2.17.1.zip) 
 
 ## 如何更新末端IO版本？
-1. 下载xarm-tool-gui并运行。  
-Windows版本：[xarm-tool-gui-2.17.1](https://update.ufactory.cc/xarm-tool-gui-win-amd64-2.17.1.zip)  
-
+1. 运行xarm-tool-gui。  
 2. 切换到对应的<u>测试工具</u>，勾选<u>末端IO驱动板</u>，点击<u>安装驱动</u>，拍下急停按钮并松开，点击<u>下一步</u>。  
 * **1305或850:** 1300/850测试工具
 ![](../assets/endio_board_2.png)
