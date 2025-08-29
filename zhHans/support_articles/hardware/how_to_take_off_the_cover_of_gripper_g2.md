@@ -13,3 +13,4 @@
 
 ## 步骤4 
 拆开外壳。
+![](assets/gripperg2_4.jpg)
