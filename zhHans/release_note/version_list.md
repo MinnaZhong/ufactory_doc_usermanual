@@ -4,6 +4,7 @@
 
 | 固件    | UFACTORY Studio | Python SDK | ROS&ROS2 |
 | ----- | --------------- | ---------- | -------- |
+| 2.7.0 | 2.7.0           | 1.16.3    | 2.0.0    |
 | 2.6.0 | 2.6.0           | 1.14.11    | 2.0.0    |
 | 2.5.5 | 2.5.1           | 1.14.7     | 2.0.0    |
 | 2.4.0 | 2.4.0           | 1.13.29    | 2.0.0    |
@@ -16,6 +17,7 @@
 
 固件&studio  
 xArm系列, UFactory 850：
+* [v2.7.0](https://pan.baidu.com/s/1_Z2nk4vWlcKYWnPrhvFk2Q?pwd=ufuf)
 * [v2.6.0](https://pan.baidu.com/s/1LgTaJasxN1Toz5l5MGbnAg?pwd=ufuf)
 * [v2.5.0](https://pan.baidu.com/s/1BpQ4z8_-NQ4Oz7Du-hyWkQ?pwd=ufuf) 
 * [v2.4.0](https://pan.baidu.com/s/1qavlHFxlz-7KM0zXe1-dCw?pwd=ufuf)   
@@ -25,10 +27,11 @@ xArm系列, UFactory 850：
 * [v2.0.0](https://pan.baidu.com/s/1R7OQVafl52jl4WLKOfqoWg?pwd=ufuf)
 
 Lite6: 
+* [v2.7.0](https://pan.baidu.com/s/1RhvWqWWA6odUooqZBCoKhQ?pwd=ufuf)
 * [v2.6.0](https://pan.baidu.com/s/1ltPdS0W-VreWpCD4giUqeQ?pwd=ufuf)
 * [v2.5.0](https://pan.baidu.com/s/1AKjGItflB4QyAXFBC7oNWw?pwd=ufuf) 
 * [v2.4.0](https://pan.baidu.com/s/1ZHhfrS1QWTAcogbQ3hixpg?pwd=ufuf)   
-* [v2.3.0](https://pan.baidu.com/s/1\_vklTAZe0jTpPEF1vtTs8Q?pwd=ufuf)[ ](https://pan.baidu.com/s/1RzyJXHH0hnMfZyj0R5yzbA?pwd=ufuf)    
+* [v2.3.0](https://pan.baidu.com/s/1sdqdWQTNcsS8r9c6MDT-0Q?pwd=ufuf)    
 * [v2.2.0](https://pan.baidu.com/s/1RmXKABtXVBWg24Crg1SGnw?pwd=ufuf)     
 * [v2.1.0](https://pan.baidu.com/s/1ADBvFfJkbEDT45EsfIAvog?pwd=ufuf)     
 * [v2.0.0](https://pan.baidu.com/s/1z-qOl0CMqe7Gx0ELi24wdQ?pwd=ufuf)
