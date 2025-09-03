@@ -1,6 +1,6 @@
 # v2.7.0
 
-Released Time: 2025.04.10
+Released Time: 2025.08.27
 
 ## Firmware V2.7.0
 1. Added self-collision detection models for the UFACTORY Gripper G2, BIO Gripper G2, RH56DFX dexterous hand, and DH-PGC-140-50 gripper.
