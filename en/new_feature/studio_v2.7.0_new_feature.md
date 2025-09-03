@@ -31,6 +31,7 @@ Feature Description
 Feature Description
 * Used for RS485 communication between the robotic arm and the end-effector or controller. The robotic arm only forwards the data without processing it.
 * Optional parameters: Robot Arm, Control Box
+  
 The following program opens the UFACTORY Gripper G2 and obtains its position.
   ![](assets/2.7.0_rs485.png)
 
