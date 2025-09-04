@@ -14,6 +14,7 @@ Taking Lite6 as an example:
 ## 2. Replace the battery
 Unscrew the 4 screws and replace the battery. Either 1 or 2 cells can be used.
 ![](assets/battery_3.png)
+![](assets/baterry_5.png)
 
 ## 3. Rewrite data
 1. Download and run [xarm-tool-gui-2.17.12](

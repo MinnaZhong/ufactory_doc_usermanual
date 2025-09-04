@@ -14,6 +14,7 @@
 ## 2. 更换电池
 拧下4颗螺丝，更换电池。1节或2节都可以。
 ![](assets/battery_3.png)
+![](assets/baterry_5.png)
 
 ## 3. 重写数据
 1. 下载并运行[xarm-tool-gui-2.17.12](https://update.ufactory.cc/xarm-tool-gui-2.17.12.zip), 输入<u>控制器IP</u>，点击<u>连接</u>；
