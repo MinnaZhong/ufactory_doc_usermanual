@@ -6,7 +6,7 @@
 
 以下视频使用灵巧手抓取鸡蛋和橙子，到用电钻钻纸板，以及控制电脑鼠标切换网页。
 
-[![Watch the video](assets/ins-homepage.jpg)](https://www.youtube.com/watch?v=-fEBGHV0h9Y)
+[![Watch the video](assets/ins-homepage.jpg)](https://www.bilibili.com/video/BV1CxHUzLEgP/?vd_source=9cdbfdb03a35ac858f97ba3ca89dc358)
 
 
 ## 硬件要求
@@ -73,5 +73,6 @@ code, res_data = arm.getset_tgpio_modbus_data(modbus, timeout=100)
 
 
 示例：[set_yinshi_rh56_gripper.py](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/example/wrapper/thridparty/set_yinshi_rh56_gripper.py)
+
 
 

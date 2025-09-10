@@ -3,6 +3,7 @@
 ## 项目概述
 
 `ufactory_vision` 是一个基于 UFACTORY（深圳市众为创造科技有限公司） 机械臂的视觉抓取演示项目。用户可以通过本项目快速实现基于视觉的物体检测和抓取。
+[![Watch the video](https://img.youtube.com/vi/ijnuqsNcfUY/0.jpg)](https://www.bilibili.com/video/BV1V9ABewE9Q/?spm_id_from=333.1387.upload.video_card.click&vd_source=9cdbfdb03a35ac858f97ba3ca89dc358)
 
 ## 硬件要求
 
@@ -129,4 +130,5 @@ cd ggcnn_grasping_demo
 我们的演示项目基于以下开源项目构建：
 
 - [GGCNN](https://github.com/dougsm/ggcnn)
+
 - [ggcnn_kinova_grasping](https://github.com/dougsm/ggcnn_kinova_grasping)
