@@ -6,11 +6,39 @@ description: We use 30000, 30001, 30002, 30003 for TCP data reporting.
 
 ### 1. Port 30000
 
-#### Firmware: V2.1.0 or later
+#### Firmware: V2.7.100 or later
 
 #### Frequency: 250HZ (200HZ with FT sensor)
 
-<table><thead><tr><th width="278">Items</th><th width="82">Type</th><th width="118">Bytes</th><th width="96">Length</th><th width="202">Description</th></tr></thead><tbody><tr><td>Number of bytes</td><td>U32</td><td>1-4</td><td>4</td><td></td></tr><tr><td>Timestamp</td><td>U64</td><td>5-12</td><td>8</td><td>μs</td></tr><tr><td>Motion Status and Mode</td><td>U8</td><td>13</td><td>1</td><td></td></tr><tr><td>Number of Cached Commands</td><td>U16</td><td>14-15</td><td>2</td><td></td></tr><tr><td>Reserved for System Information</td><td>U16</td><td>16-32</td><td>17</td><td></td></tr><tr><td>Target Joint Positions</td><td>FP32</td><td>33-60</td><td>28</td><td>rad</td></tr><tr><td>Target Joint Velocities</td><td>FP32</td><td>61-88</td><td>28</td><td>rad/s</td></tr><tr><td>Target Joint Accelerations</td><td>FP32</td><td>89-116</td><td>28</td><td>rad/s²</td></tr><tr><td>Actual Joint Positions</td><td>FP32</td><td>117-144</td><td>28</td><td>rad</td></tr><tr><td>Actual Joint Velocities</td><td>FP32</td><td>145-172</td><td>28</td><td>rad/s</td></tr><tr><td>Actual Joint Accelerations</td><td>FP32</td><td>173-200</td><td>28</td><td>rad/s²</td></tr><tr><td>Actual Joint Currents</td><td>FP32</td><td>201-228</td><td>28</td><td>A</td></tr><tr><td>Estimated Joint Torques</td><td>FP32</td><td>229-256</td><td>28</td><td>N·m</td></tr><tr><td>Reserved for Joints</td><td>FP32</td><td>257-424</td><td>168</td><td></td></tr><tr><td>Target TCP Pose</td><td>FP32</td><td>425-448</td><td>24</td><td>mm &#x26; rad</td></tr><tr><td>Target TCP Speed</td><td>FP32</td><td>449-472</td><td>24</td><td>mm/s &#x26; rad/s</td></tr><tr><td>Actual TCP Pose</td><td>FP32</td><td>473-496</td><td>24</td><td><p>mm &#x26;rad</p><p>[x,y,z,rx,ry,rz]</p></td></tr><tr><td>Actual TCP Speed</td><td>FP32</td><td>497-520</td><td>24</td><td>mm/s &#x26; rad/s</td></tr><tr><td>Estimated TCP Torques</td><td>FP32</td><td>521-544</td><td>24</td><td>N &#x26; N·m</td></tr><tr><td>Reserved for Cartesian</td><td>FP32</td><td>545-688</td><td>144</td><td></td></tr><tr><td>Raw Data of 6-Axis Torque Sensor</td><td>FP32</td><td>689-712</td><td>24</td><td><p>N &#x26; N·m</p><p>[Fx,Fy,Fz,Tx,Ty,Tz]</p></td></tr><tr><td>Filtered Data of 6-Axis Torque Sensor</td><td>FP32</td><td>713-736</td><td>24</td><td><p>N &#x26; N·m</p><p>[Fx,Fy,Fz,Tx,Ty,Tz]</p></td></tr><tr><td>Reserved for External Devices</td><td>FP32</td><td>737-784</td><td>48</td><td></td></tr></tbody></table>
+| Items                                 | Type  | Bytes   | Length | Big_endian | Description                 |
+| ------------------------------------- | ----- | ------- | ------ | ---------- | --------------------------- |
+| Number of bytes                       | U32   | 1-4     | 4      | Big        |                             |
+| Timestamp                             | U64   | 5-12    | 8      | Big        | us                          |
+| Motion Status and Mode                | U8    | 13      | 1      | Big        |                             |
+| Number of Cached Commands             | U16   | 14-15   | 2      | Big        |                             |
+| Reserved for System Information       | U16   | 16-32   | 17     | Big        |                             |
+| Target Joint Positions                | FP32  | 33-60   | 28     | Little     | rad                         |
+| Target Joint Velocities               | FP32  | 61-88   | 28     | Little     | rad/s                       |
+| Target Joint Accelerations            | FP32  | 89-116  | 28     | Little     | rad/s²                      |
+| Actual Joint Positions                | FP32  | 117-144 | 28     | Little     | rad                         |
+| Actual Joint Velocities               | FP32  | 145-172 | 28     | Little     | rad/s                       |
+| Actual Joint Accelerations            | FP32  | 173-200 | 28     | Little     | rad/s²                      |
+| Actual Joint Currents                 | FP32  | 201-228 | 28     | Little     | A                           |
+| Estimated Joint Torques               | FP32  | 229-256 | 28     | Little     | N·m                         |
+| Reserved for Joints                   | FP32  | 257-424 | 168    | Little     |                             |
+| Target TCP Pose                       | FP32  | 425-448 | 24     | Little     | mm & rad                    |
+| Target TCP Speed                      | FP32  | 449-472 | 24     | Little     | mm/s & rad/s                |
+| Actual TCP Pose                       | FP32  | 473-496 | 24     | Little     | mm &rad>[x,y,z,rx,ry,rz]    |
+| Actual TCP Speed                      | FP32  | 497-520 | 24     | Little     | mm/s & rad/s                |
+| Estimated TCP Torques                 | FP32  | 521-544 | 24     | Little     | N & N·m                     |
+| Reserved for Cartesian                | FP32  | 545-688 | 144    | Little     |                             |
+| Raw Data of 6-Axis Torque Sensor      | FP32  | 689-712 | 24     | Little     | N & N·m [Fx,Fy,Fz,Tx,Ty,Tz] |
+| Filtered Data of 6-Axis Torque Sensor | FP32  | 713-736 | 24     | Little     | N & N·m [Fx,Fy,Fz,Tx,Ty,Tz] |
+| Gripper Position                      | INT16 | 737-738 | 2      | Big        | mm                          |
+| Gripper Speed                         | INT16 | 739-740 | 2      | Big        | mm/s                        |
+| Gripper Current or Force              | INT16 | 741-742 | 2      | Big        | mA                          |
+| Reserved for External Devices         | NA    | 743     | 42     |            |                             |
+
 
 ### 2. Port 30001
 
