@@ -7,7 +7,8 @@ Product: xArm series, UF 850, Lite6
 
 UFactory version: V2.4.0+
 
-Please note that if the arm is not used for a long time(**≥3 months**), you need to power on the arm for 6 hours every 3 months to charge the built-in battery of the arm, otherwise the encoder data may be lost and report S18 error.
+1. If the arm is not used for a long time(**≥3 months**), you need to power on the arm for 6 hours every 3 months to charge the built-in battery of the arm, otherwise the encoder data may be lost and report S18 error.
+2. Logistics transportation may cause encoder oscillation and report S18 error.
 
 ![](../assets/S18.png)
 
