@@ -1,18 +1,18 @@
 # 如何通过TCP端口30000获取机械爪实时数据
 
 ## 1.介绍
-* 固件要求： ≥V2.7.100;   [点击下载](https://update.ufactory.cc/xarmcontroller-x86_64-2.7.100.tar.gz)
+
+* 固件要求： ≥V2.7.101;   [点击下载](https://update.ufactory.cc/xarmcontroller-x86_64-2.7.101.tar.gz)
 * Python SDK：V1.17.0+ ; [点击下载](https://update.ufactory.cc/xArm-Python-SDK-develop.zip)
 * TCP30000端口默认不上报机械爪的位置，速度，电流或力。若需要，需要调用SDK将上报打开。
 
 机械爪上报说明如下：
 
-| 参数      | 类型    | 字节数 | 长度  | 大小端 | 说明   |
-| ------- | ----- | --- | --- | --- | ---- |
-| 机械爪位置   | INT16 | 737 | 738 | 大端  | mm   |
-| 机械爪速度   | INT16 | 739 | 740 | 大端  | mm/s |
-| 机械爪电流或力 | INT16 | 741 | 742 | 大端  | mA   |
-
+| 参数           | 类型  | 字节数  | 长度 | 大小端 | 说明 |
+| -------------- | ----- | ------- | ---- | ------ | ---- |
+| 机械爪位置     | INT16 | 739-740 | 2    | 大端   | mm   |
+| 机械爪速度     | INT16 | 741-742 | 2    | 大端   | mm/s |
+| 机械爪电流或力 | INT16 | 743-744 | 2    | 大端   | mA   |
 
 完整TCP 30000 端口上报数据请参考：
 [TCP 端口数据说明](data-description-of-tcp-port.md)
@@ -20,10 +20,10 @@
 ## 2. Python接口
 需要打开机械爪的上报。
 参数1：上报类型
+
 *  1-机械爪； 
 *  2-机械爪G2； 
 *  3-BIO机械爪； 
-*  4/5-Robotiq机械爪；
 
 参数2：频率
 ```python
@@ -136,10 +136,10 @@ try:
         buffer = buffer[size:]
         
         # Extract gripper data (INT16 big-endian format)
-        if len(data) >= 742:
-            gripper_pos = bytes_to_int16(data[736:738], is_big_endian=True)
-            gripper_speed = bytes_to_int16(data[738:740], is_big_endian=True)
-            gripper_force = bytes_to_int16(data[740:742], is_big_endian=True)
+        if len(data) >= 744:
+            gripper_pos = bytes_to_int16(data[738:740], is_big_endian=True)
+            gripper_speed = bytes_to_int16(data[740:742], is_big_endian=True)
+            gripper_force = bytes_to_int16(data[742:744], is_big_endian=True)
             print('Position: {}, Speed: {}, Current: {}'.format(gripper_pos, gripper_speed, gripper_force/1000))
         else:
             print('Warning: data packet size {} is too small'.format(len(data)))

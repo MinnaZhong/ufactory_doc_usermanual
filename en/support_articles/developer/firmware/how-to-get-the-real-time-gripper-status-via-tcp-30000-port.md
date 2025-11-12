@@ -1,6 +1,6 @@
 # How to Obtain Real-Time Gripper Status via TCP Port 30000
 ## Introduction
-* Firmware: ≥V2.7.100; [Download](https://drive.google.com/drive/folders/1BVaVGUbnvQjmIUxTzW0uuFDwyIS89ze_?usp=sharing)
+* Firmware: ≥V2.7.101; [Download](https://drive.google.com/drive/folders/1BVaVGUbnvQjmIUxTzW0uuFDwyIS89ze_?usp=sharing)
 * Python SDK: V1.17.0+; [Download](https://drive.google.com/drive/folders/1BVaVGUbnvQjmIUxTzW0uuFDwyIS89ze_?usp=sharing)
 * The TCP 30000 port does not report the gripper's position, speed, current/force by default. If you need this data, you must use the SDK to enable it.
 
@@ -8,9 +8,9 @@ The specifications for gripper data reporting are as follows:
 
 | Items                    | Type  | Bytes   | Length | Big_endian | Description |
 | ------------------------ | ----- | ------- | ------ | ---------- | ----------- |
-| Gripper Position         | INT16 | 737-738 | 2      | Big        | mm          |
-| Gripper Speed            | INT16 | 739-740 | 2      | Big        | mm/s        |
-| Gripper Current or Force | INT16 | 741-742 | 2      | Big        | mA          |
+| Gripper Position         | INT16 | 739-740 | 2      | Big        | mm          |
+| Gripper Speed            | INT16 | 741-742 | 2      | Big        | mm/s        |
+| Gripper Current or Force | INT16 | 743-744 | 2      | Big        | mA          |
 
 For the complete TCP 30000 port reporting data, please refer to:
 [Data Description of TCP port](data-description-of-tcp-port.md)
@@ -21,7 +21,6 @@ Parameter 1: Reporting Type
 * 1 - Gripper;
 * 2 - Gripper G2;
 * 3 - BIO Gripper;
-* 4/5 - Robotiq Gripper;
 
 Parameter 2: Frequency
 
@@ -136,9 +135,9 @@ try:
         
         # Extract gripper data (INT16 big-endian format)
         if len(data) >= 742:
-            gripper_pos = bytes_to_int16(data[736:738], is_big_endian=True)
-            gripper_speed = bytes_to_int16(data[738:740], is_big_endian=True)
-            gripper_force = bytes_to_int16(data[740:742], is_big_endian=True)
+            gripper_pos = bytes_to_int16(data[738:740], is_big_endian=True)
+            gripper_speed = bytes_to_int16(data[740:742], is_big_endian=True)
+            gripper_force = bytes_to_int16(data[742:744], is_big_endian=True)
             print('Position: {}, Speed: {}, Current: {}'.format(gripper_pos, gripper_speed, gripper_force/1000))
         else:
             print('Warning: data packet size {} is too small'.format(len(data)))
