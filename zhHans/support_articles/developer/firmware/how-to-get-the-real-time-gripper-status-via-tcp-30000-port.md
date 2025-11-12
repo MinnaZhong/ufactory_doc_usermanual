@@ -8,16 +8,19 @@
 
 机械爪上报说明如下：
 
-| 参数           | 类型  | 字节数  | 长度 | 大小端 | 说明 |
-| -------------- | ----- | ------- | ---- | ------ | ---- |
-| 机械爪位置     | INT16 | 739-740 | 2    | 大端   | mm   |
-| 机械爪速度     | INT16 | 741-742 | 2    | 大端   | mm/s |
-| 机械爪电流或力 | INT16 | 743-744 | 2    | 大端   | mA   |
+| 参数           | 类型  | 字节数  | 长度 | 大小端 | 说明                                                         |
+| -------------- | ----- | ------- | ---- | ------ | ------------------------------------------------------------ |
+| 机械爪类型     | U8    | 737     | 1    | 大端   | 0：No End Effector， <br />1：Gripper， <br />2：Gripper G2， <br />3：BIO Gripper G2， |
+| 机械爪状态     | U8    | 738     | 1    | 大端   |                                                              |
+| 机械爪位置     | INT16 | 739-740 | 2    | 大端   | mm                                                           |
+| 机械爪速度     | INT16 | 741-742 | 2    | 大端   | mm/s                                                         |
+| 机械爪电流或力 | INT16 | 743-744 | 2    | 大端   | mA                                                           |
 
 完整TCP 30000 端口上报数据请参考：
 [TCP 端口数据说明](data-description-of-tcp-port.md)
 
 ## 2. Python接口
+
 需要打开机械爪的上报。
 参数1：上报类型
 
@@ -38,10 +41,6 @@ ret = arm.set_external_device_monitor_params(2, 250)
 Description: Get xArm gripper position from TCP 30000 port
     1. Connect to xArm
     2. Enable external device monitor for Gripper on TCP port 30000
-    3. Read real-time gripper data from TCP 30000:
-       - Position: bytes 737-738 (INT16 big-endian), mm
-       - Speed: bytes 739-740 (INT16 big-endian), mm/s
-       - Current(Force): bytes 741-742 (INT16 big-endian), mA
 """
 
 import os
@@ -137,10 +136,12 @@ try:
         
         # Extract gripper data (INT16 big-endian format)
         if len(data) >= 744:
+            gripper_type = data[736]
+            gripper_state = data[737]
             gripper_pos = bytes_to_int16(data[738:740], is_big_endian=True)
             gripper_speed = bytes_to_int16(data[740:742], is_big_endian=True)
             gripper_force = bytes_to_int16(data[742:744], is_big_endian=True)
-            print('Position: {}, Speed: {}, Current: {}'.format(gripper_pos, gripper_speed, gripper_force/1000))
+            print('Type: {}, State:{}, Position: {}, Speed: {}, Current: {}'.format(gripper_type,gripper_state,gripper_pos,gripper_speed, gripper_force/1000))
         else:
             print('Warning: data packet size {} is too small'.format(len(data)))
 

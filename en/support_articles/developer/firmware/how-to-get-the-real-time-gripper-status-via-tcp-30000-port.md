@@ -1,16 +1,20 @@
 # How to Obtain Real-Time Gripper Status via TCP Port 30000
+
 ## Introduction
+
 * Firmware: ≥V2.7.101; [Download](https://drive.google.com/drive/folders/1BVaVGUbnvQjmIUxTzW0uuFDwyIS89ze_?usp=sharing)
 * Python SDK: V1.17.0+; [Download](https://drive.google.com/drive/folders/1BVaVGUbnvQjmIUxTzW0uuFDwyIS89ze_?usp=sharing)
 * The TCP 30000 port does not report the gripper's position, speed, current/force by default. If you need this data, you must use the SDK to enable it.
 
 The specifications for gripper data reporting are as follows:
 
-| Items                    | Type  | Bytes   | Length | Big_endian | Description |
-| ------------------------ | ----- | ------- | ------ | ---------- | ----------- |
-| Gripper Position         | INT16 | 739-740 | 2      | Big        | mm          |
-| Gripper Speed            | INT16 | 741-742 | 2      | Big        | mm/s        |
-| Gripper Current or Force | INT16 | 743-744 | 2      | Big        | mA          |
+| Items                    | Type  | Bytes   | Length | Big_endian | Description                                                  |
+| ------------------------ | ----- | ------- | ------ | ---------- | ------------------------------------------------------------ |
+| Gripper Type             | U8    | 737     | 1      | Big        | 0：No End Effector， <br />1：Gripper， <br />2：Gripper G2， <br />3：BIO Gripper G2， |
+| Griper State             | U8    | 738     | 1      | Big        |                                                              |
+| Gripper Position         | INT16 | 739-740 | 2      | Big        | mm                                                           |
+| Gripper Speed            | INT16 | 741-742 | 2      | Big        | mm/s                                                         |
+| Gripper Current or Force | INT16 | 743-744 | 2      | Big        | mA                                                           |
 
 For the complete TCP 30000 port reporting data, please refer to:
 [Data Description of TCP port](data-description-of-tcp-port.md)
@@ -36,10 +40,6 @@ ret = arm.set_external_device_monitor_params(2, 250)
 Description: Get xArm gripper position from TCP 30000 port
     1. Connect to xArm
     2. Enable external device monitor for Gripper on TCP port 30000
-    3. Read real-time gripper data from TCP 30000:
-       - Position: bytes 737-738 (INT16 big-endian), mm
-       - Speed: bytes 739-740 (INT16 big-endian), mm/s
-       - Current(Force): bytes 741-742 (INT16 big-endian), mA
 """
 
 import os
@@ -134,11 +134,13 @@ try:
         buffer = buffer[size:]
         
         # Extract gripper data (INT16 big-endian format)
-        if len(data) >= 742:
+        if len(data) >= 744:
+            gripper_type = data[736]
+            gripper_state = data[737]
             gripper_pos = bytes_to_int16(data[738:740], is_big_endian=True)
             gripper_speed = bytes_to_int16(data[740:742], is_big_endian=True)
             gripper_force = bytes_to_int16(data[742:744], is_big_endian=True)
-            print('Position: {}, Speed: {}, Current: {}'.format(gripper_pos, gripper_speed, gripper_force/1000))
+            print('Type: {}, State:{}, Position: {}, Speed: {}, Current: {}'.format(gripper_type,gripper_state,gripper_pos,gripper_speed, gripper_force/1000))
         else:
             print('Warning: data packet size {} is too small'.format(len(data)))
 
