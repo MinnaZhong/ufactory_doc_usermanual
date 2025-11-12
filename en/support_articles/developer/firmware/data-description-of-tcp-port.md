@@ -6,7 +6,7 @@ description: We use 30000, 30001, 30002, 30003 for TCP data reporting.
 
 ### 1. Port 30000
 
-#### Firmware: V2.7.100 or later
+#### Firmware: V2.7.101 or later
 
 #### Frequency: 250HZ (200HZ with FT sensor)
 
