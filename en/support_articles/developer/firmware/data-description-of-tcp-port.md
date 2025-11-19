@@ -31,7 +31,9 @@ description: We use 30000, 30001, 30002, 30003 for TCP data reporting.
 | Actual TCP Pose                       | FP32  | 473-496 | 24     | Little     | mm &rad>[x,y,z,rx,ry,rz]                                     |
 | Actual TCP Speed                      | FP32  | 497-520 | 24     | Little     | mm/s & rad/s                                                 |
 | Estimated TCP Torques                 | FP32  | 521-544 | 24     | Little     | N & N·m                                                      |
-| Reserved for Cartesian                | FP32  | 545-688 | 144    | Little     |                                                              |
+| Target TCP Accelerations              | FP32  | 545-568 | 24     | Little     | mm/s² & rad/s²                                               |
+| Actual TCP Accelerations              | FP32  | 569-592 | 24     | Little     | mm/s² & rad/s²                                               |
+| Reserved for Cartesian                | FP32  | 593-688 | 96     | Little     |                                                              |
 | Raw Data of 6-Axis Torque Sensor      | FP32  | 689-712 | 24     | Little     | N & N·m [Fx,Fy,Fz,Tx,Ty,Tz]                                  |
 | Filtered Data of 6-Axis Torque Sensor | FP32  | 713-736 | 24     | Little     | N & N·m [Fx,Fy,Fz,Tx,Ty,Tz]                                  |
 | Gripper Type                          | U8    | 737     | 1      | Big        | 0：No End Effector，<br />1：Gripper，<br />2：Gripper G2，<br />3：BIO Gripper G2，<br /> |
