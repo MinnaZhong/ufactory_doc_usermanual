@@ -42,10 +42,10 @@ After following this guide, users can seemlessly integrate the UbisRos soft grip
 
 
 #### 1. Set-up Soft Gripper
-Connect to the gripper via Wifi. The network name will be the serial number, and the password will be __. Navigate to the local network- it will look something like 192.168.4.1. Select the 'Configure WiFi' button, find your local network, and connect.
+Connect to the gripper via Wifi. The network name will be the serial number, and the password will be the serial number. Navigate to the gripper IP Address- it should be 192.168.4.1. Select the 'Configure WiFi' button, find your local network, and connect.
 
 #### 2. Find the Gripper IP Address
-Log in to your Wifi router- the address should look something like 192.168.0.1 or  192.168.1.1 and input the password on the back of your router. Navigate to your devices page and locate the soft robotics gripper by its serial number. Under the settings of the gripper, you'll find the IPv4 Address- it should look something like: 192.168.1.xxx. Take note of this address.
+Log in to your Wifi router. The address may be different for each router, but should be something like 192.168.0.1 or  192.168.1.1; input the password on the back of your router. Navigate to your devices page and locate the soft robotics gripper by its serial number. Under the settings of the gripper, you'll find the IPv4 Address: 192.168.1.xxx. Take note of this address.
 
 #### 3. Add UbiRos Class to Python SDK
 Add a new folder in the Python SDK and title it Ubiros. Add this code to a file titled ubiros_control.py.
