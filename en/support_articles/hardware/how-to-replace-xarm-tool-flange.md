@@ -36,13 +36,13 @@ When pulling this piece apart, notice that the bolt heads must not touch the cap
 
 ### 8. Disconnect tool flange
 
-Unscrew the two bolts on the metal boomerang-looking piece and unplug the colorful comm wires as well as the black power cable.
+Unscrew the two bolts on the metal boomerang-looking piece and unplug the colorful comm wires as well as the black-wrapped power cable.
 
 ![](assets/flange_step8.png)
 
 ### 9. Connect the new tool flange
 
-Plug the black power cable into the corresponding terminal. Connect the colorful comm wires, noting that the red wire must line up with the half circle on the circuit board.
+Plug the black-wrapped power cable into the corresponding terminal. Connect the colorful comm wires, noting that the red wire must line up with the half circle on the circuit board.
 
 ![](assets/flange_step9.jpg)
 
