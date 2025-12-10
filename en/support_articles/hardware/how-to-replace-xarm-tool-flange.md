@@ -42,7 +42,7 @@ Unscrew the two bolts on the metal boomerang-looking piece and unplug the colorf
 
 ### 9. Connect the new tool flange
 
-Plug the black power cable into the corresponging terminal. Connect the colorful comm wires, noting that the red wire must line up with the half circle on the circuit board.
+Plug the black power cable into the corresponding terminal. Connect the colorful comm wires, noting that the red wire must line up with the half circle on the circuit board.
 
 ![](assets/flange_step9.jpg)
 
@@ -71,7 +71,7 @@ Red is +24V and blue is GND. ~1cm needs to be stripped from wires for crimping. 
 
 ### 14. Plug comm terminals in
 
-Note that the red wire in the comm terminals must allign with teh half circle on the circuit board.
+Note that the red wire in the comm terminals must align with the half circle on the circuit board.
 
 ![](assets/flange_step14.jpg)
 
@@ -83,7 +83,7 @@ Note that the red wire in the comm terminals must allign with teh half circle on
 
 ![](assets/flange_step16.jpg)
 
-### 17. Allign joint with link
+### 17. Align joint with link
 
 Take rubber UF logo off and pull wires through while lining the joint with link. Note how the port aligns with the 0 position marked in step 1.
 
