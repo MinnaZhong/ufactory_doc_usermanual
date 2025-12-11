@@ -1,8 +1,8 @@
-# UFactory 机械臂与 UbiRos 软夹爪的集成项目
+# UFactory 机械臂与 UbiRos 软夹爪的集成应用项目
 
 ## 项目概述
 
-本项目演示了基于 **UFACTORY 机械臂** 和 **UbiRos GNT2508 柔性软体夹爪** 的应用。
+本项目演示了基于 **UFACTORY 机械臂** 和 **UbiRos GNT2508 软夹爪** 的应用。
 
 遵循本指南后，用户可以将 UbiRos 软夹爪无缝集成到 xArm 开发者 Python SDK 中。
 
@@ -10,7 +10,7 @@
 
 - 机械臂：[UFACTORY](https://www.ufactory.cc/)-850、xArm 系列（版本 1305）
 
-- 柔性软体夹爪：[UBIROS](https://ubiros.com/product/gentle-duo-robotic-gripper/) - Gentle Duo GNT2508
+- 软夹爪：[UBIROS](https://ubiros.com/product/gentle-duo-robotic-gripper/) - Gentle Duo GNT2508
 
 ## 硬件连接
 
@@ -29,7 +29,7 @@
 |  5   | 粉色 |  用户 485-A  |  11  |  橙色  | 模拟输入 0 (AI0) |
 |  6   | 黄色 |  用户 485-B  |  12  | 浅绿色 | 模拟输入 1 (AI1) |
 
-### GNT2508 Gentle Duo 软夹爪
+### Gentle Duo GNT2508 夹爪
 
 | 引脚 |  颜色  |       信号       |
 | :--: | :----: | :--------------: |
