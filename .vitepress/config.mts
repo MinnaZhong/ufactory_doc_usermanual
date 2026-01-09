@@ -2,7 +2,7 @@ import { defineConfig, UserConfig } from 'vitepress'
 import { generateSidebar, withSidebar } from 'vitepress-sidebar';
 import { withI18n, } from 'vitepress-i18n';
 // import { VitePressI18nOptions } from 'vitepress-i18n/types.ts';
-
+import compression from 'vite-plugin-compression'
 const editLinkPattern = `/:path`;
 // https://vitepress.dev/reference/site-config
 const vitePressConfig: UserConfig = defineConfig({
@@ -17,6 +17,7 @@ const vitePressConfig: UserConfig = defineConfig({
   rewrites: {
     'en/:rest*': ':rest*'
   },
+
 })
 
 const defaultLocale: string = 'en';
@@ -104,5 +105,17 @@ const vitePressI18nConfig: any = {
 };
 
 export default defineConfig(
-  withSidebar(withI18n(vitePressConfig, vitePressI18nConfig), vitePressSidebarConfig)
+  withSidebar(withI18n({
+    ...vitePressConfig,
+    vite: {
+      plugins: [
+        compression({
+          algorithm: 'gzip', // 压缩算法
+          ext: '.gz', // 压缩后文件后缀
+          threshold: 10240, // 文件大小超过 10KB 才压缩
+          deleteOriginFile: false // 不删除原始文件
+        })
+      ]
+    }
+  }, vitePressI18nConfig), vitePressSidebarConfig)
 );
