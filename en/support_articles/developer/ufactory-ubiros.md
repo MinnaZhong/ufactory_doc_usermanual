@@ -4,6 +4,7 @@
 
 This project demonstrates an application based on the **UFACTORY robotic arm** and the **UBIROS Gentle Duo Touch Soft Robotics Gripper**.  
 After following this guide, users can seemlessly integrate the UBIROS soft gripper into the xArm Developer Python SDK.
+![](assets/IMG_1424.jpeg)
 
 ## Hardware Requirements
 * Robotic Arm: [UFACTORY](https://www.ufactory.cc/)- 850, xArm series (version 1305)
