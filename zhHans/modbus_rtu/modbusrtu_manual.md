@@ -1,3 +1,8 @@
+---
+title: Modbus RTU使用手册
+order: 1
+---
+
 # xArm 控制器 RS-485（Modbus RTU）功能使用手册
 
 ## 1. 概述
