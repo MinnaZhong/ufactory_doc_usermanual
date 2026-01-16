@@ -1,3 +1,8 @@
+---
+title: Modbus RTU User Guide
+order: 1
+---
+
 # xArm Controller RS-485 (Modbus RTU) User Guide
 
 ## 1. Overview
