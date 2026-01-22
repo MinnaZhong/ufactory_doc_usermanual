@@ -3,7 +3,7 @@
 ## Project Overview
 
 This project demonstrates an application based on the **UFACTORY robotic arm** and the **UBIROS Gentle Duo Touch Soft Robotics Gripper**.  
-After following this guide, users can seemlessly integrate the UBIROS soft gripper into the xArm Developer Python SDK.
+After following this guide, users can seamlessly integrate the UBIROS soft gripper into the xArm Developer Python SDK.
 ![](assets/IMG_1424.jpeg)
 
 ## Hardware Requirements
@@ -42,7 +42,7 @@ After following this guide, users can seemlessly integrate the UBIROS soft gripp
 | 5   | Purple Tool Input 1 (TI1) | Green Digital Output (DO)| 
 
 
-#### 1. Set-up Soft Gripper
+#### 1. Set up Soft Gripper
 Connect to the gripper via Wifi. The network name will be the serial number, and the password will be 'GentleUbiros'. Navigate to the gripper IP Address- it should be 192.168.4.1. Select the 'Configure WiFi' button, find your local network, and connect.
 
 #### 2. Find the Gripper IP Address

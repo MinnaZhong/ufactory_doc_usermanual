@@ -5,6 +5,7 @@
 本项目演示了基于 **UFACTORY 机械臂** 和 **UbiRos GNT2508 软夹爪** 的应用。
 
 遵循本指南后，用户可以将 UbiRos 软夹爪无缝集成到 xArm 开发者 Python SDK 中。
+![](assets/IMG_1424.jpeg)
 
 ## 硬件需求
 
