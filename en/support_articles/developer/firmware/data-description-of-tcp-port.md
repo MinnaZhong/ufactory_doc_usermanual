@@ -37,7 +37,7 @@ description: We use 30000, 30001, 30002, 30003 for TCP data reporting.
 | Raw Data of 6-Axis Torque Sensor      | FP32  | 689-712 | 24     | Little     | N & N·m [Fx,Fy,Fz,Tx,Ty,Tz]                                  |
 | Filtered Data of 6-Axis Torque Sensor | FP32  | 713-736 | 24     | Little     | N & N·m [Fx,Fy,Fz,Tx,Ty,Tz]                                  |
 | Gripper Type                          | U8    | 737     | 1      | Big        | 0：No End Effector，<br />1：Gripper，<br />2：Gripper G2，<br />3：BIO Gripper G2，<br /> |
-| Griper State                          | U8    | 738     | 1      | Big        |                                                              |
+| Griper State                          | U8    | 738     | 1      | Big        | Status of  Gripper. <br />For Robotiq grippers, the status is determined by bits 6 and 7.<br />0: In motion, no object detected.<br />1: Object detected while opening (contact made before reaching the target position).<br />2: Object detected while closing (contact made before reaching the target position).<br />3: Target position reached (no object detected or object lost). |
 | Gripper Position                      | INT16 | 739-740 | 2      | Big        | mm                                                           |
 | Gripper Speed                         | INT16 | 741-742 | 2      | Big        | mm/s                                                         |
 | Gripper Current or Force              | INT16 | 743-744 | 2      | Big        | mA                                                           |
