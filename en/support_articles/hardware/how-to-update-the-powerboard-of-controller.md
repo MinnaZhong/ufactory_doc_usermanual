@@ -16,8 +16,14 @@ As shown in the figure below, the powerboard is V4.6.9.
 | xArm or 850     | AC1303, AC1304, DC13xx, AC8500, DC8500 | xArmPwrApp_V4.6.9_debug_20240729.bin   | V4.6.x  |
 | xArm or Lite6           | DL1000, DG1000                                 | xArmPwrApp_V5.6.5_debug_20230517.bin   | V5.6.x  |
 
+> [!Note]
+>
+> **Upgrading between major versions is not supported (e.g., upgrading from V3.x to V4.x).**
+
+
 
 ## Download
+
 - Windows: [xarm-tool-gui-win-amd64-2.17.14](https://drive.google.com/drive/folders/1DlFYdzB7ARn-aMWK96mjEsWmGnob2RIk?usp=sharing)
 
 ## Bug Fix

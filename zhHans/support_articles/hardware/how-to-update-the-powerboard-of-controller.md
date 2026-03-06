@@ -16,6 +16,10 @@
 | xArm或850 | AC1303, AC1304, DC13xx, AC8500, DC8500 | xArmPwrApp_V4.6.9_debug_20240729.bin   | V4.6.x |
 | xArm或Lite6    | DL1000，DG1000                                 | xArmPwrApp_V5.6.5_debug_20230517.bin   | V5.6.x |
 
+> [!Note]
+>
+> **不支持跨版本升级，如V4.x无法升级到V5.x**
+
 
 
 ## 下载

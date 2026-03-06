@@ -15,7 +15,12 @@ As shown in the figure below, the safeboard is V4.6.10.
 | xArm or 850     | AC1303, AC1304, DC13xx, AC8500, DC8500 | xArmSafeApp_V4.6.12_debug_20250223.bin  | V4.6.x  |
 | Lite6           | DL1000                                 | xArmSafeApp_V5.6.11_debug_20240928.bin  | V5.6.x  |
 
+> [!Note]
+>
+> **Upgrading between major versions is not supported (e.g., upgrading from V4.x to V5.x).**
+
 ## Download
+
 [xarm-tool-gui-2.16.10.zip](https://drive.google.com/drive/folders/1m96yfoUb2SrXt25c-ClZ6JqEgjaukS7e?usp=sharing)
 
 ## Bug Fix

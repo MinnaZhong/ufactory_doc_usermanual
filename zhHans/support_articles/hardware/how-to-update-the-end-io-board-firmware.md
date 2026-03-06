@@ -13,7 +13,14 @@
 | xArm1300~1304版本或Lite6 | xArmEndIOApp_V2.6.0_debug_20230811.bin | V2.6.x |
 | xArm1305版本或850        | xArmEndIOApp_V3.1.2_debug_20240927.bin     | V3.1.x |
 
+> [!Note]
+>
+> **不支持跨版本升级，如V1.x无法升级到V2.x**
+
+
+
 ## 下载
+
 * Windows版本：[xarm-tool-gui-2.17.1](https://update.ufactory.cc/xarm-tool-gui-win-amd64-2.17.1.zip) 
 
 ## 如何更新末端IO版本？

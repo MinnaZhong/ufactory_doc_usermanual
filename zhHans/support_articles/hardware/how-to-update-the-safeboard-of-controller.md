@@ -16,8 +16,14 @@
 | xArm或850 | AC1303, AC1304, DC13xx, AC8500, DC8500 | xArmSafeApp_V4.6.12_debug_20250223.bin  | V4.6.x |
 | Lite6    | DL1000                                 | xArmSafeApp_V5.6.11_debug_20240928.bin  | V5.6.x |
 
+> [!Note]
+>
+> **不支持跨版本升级，如V4.x无法升级到V5.x**
+
+
 
 ## 下载
+
 下载：[xarm-tool-gui-2.16.10.zip](https://update.ufactory.cc/xarm-tool-gui-2.16.10.zip)
 
 ## 升级提示

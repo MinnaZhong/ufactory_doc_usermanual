@@ -12,8 +12,14 @@
 | xArm1304版本或Lite6 | ServoGD32F405App_V4.0.23_debug_20250317.bin | V4.0.x  |
 | xArm1305版本或850   | ServoGD32F425App_V5.0.9_debug_20241224      | V5.0.x  |
 
+> [!Note]
+>
+> **不支持跨版本升级，如V4.x无法升级到V5.x**
+
+
 
 ## 如何更新关节固件版本？
+
 1. 下载xarm-tool-gui并运行。  
 Windows版本：[xarm-tool-gui-2.17.1](https://update.ufactory.cc/xarm-tool-gui-win-amd64-2.17.1.zip)  
 

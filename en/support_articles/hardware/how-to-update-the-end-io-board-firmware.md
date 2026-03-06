@@ -13,6 +13,10 @@ As shown in the figure below, the IO Board version is V2.6.0.
 | xArm1300~xArm1304 or Lite6 | xArmEndIOApp_V2.6.0_debug_20230811.bin | V2.6.x         |
 | xArm1305 or 850            | xArmEndIOApp_V3.1.2_debug_20240927     | V3.1.x         |
 
+> [!Note]
+>
+> **Upgrading between major versions is not supported (e.g., upgrading from V1.x to V2.x).**
+
 
 
 ## Download
@@ -31,5 +35,4 @@ As shown in the figure below, the IO Board version is V2.6.0.
 ![](../assets/endio_board_4.jpg)
 
 3. Wait for 1-2 minutes, it will prompt 'Installation Success'. The arm will reboot automatically. Wait for 1-2 minutes, re-connect with xarm-tool-gui, enable the robot, and check the end io board version.
-
 
