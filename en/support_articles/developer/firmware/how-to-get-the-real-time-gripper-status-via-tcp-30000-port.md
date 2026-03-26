@@ -22,6 +22,9 @@ For the complete TCP 30000 port reporting data, please refer to:
 ## 2. Python Interface
 You need to enable gripper data reporting first.
 Parameter 1: Reporting Type
+
+- 0 - Disable reporting
+
 * 1 - Gripper;
 * 2 - Gripper G2;
 * 3 - BIO Gripper;
