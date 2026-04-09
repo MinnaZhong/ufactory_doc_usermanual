@@ -4,12 +4,20 @@ Product: xArm Gripper.
 
 1. Press down the E stop button.
 2. Remove 6 screws on the gripper cover and manually turn the motor of the gripper, to close the gripper.
-![](assets/gripper_cover.png)
-1. Release the E stop button and Enable the robot.
-2. Copy the Python code below to UFactoryStudio or local Python IDE.
-3. Modify to the corresponding IP.
-4. Run the script, it will set the current position of the gripper as 0. Press down the E stop button and release to take effect.
-5. Try to control the gripper.&#x20;
+  ![](assets/gripper_cover.png)
+3. Release the E stop button and Enable the robot.
+4. Copy the Python code below to UFactoryStudio or local Python IDE.
+5. Modify to the corresponding IP.
+6. Run the script, it will set the current position of the gripper as 0. Press down the E stop button and release to take effect.
+7. Try to control the gripper.
+
+---
+
+> [!Note]
+>
+> Applicable only to the **xArm Gripper**; not compatible with the **xArm Gripper G2**.
+
+---
 
 ```python
 import os
