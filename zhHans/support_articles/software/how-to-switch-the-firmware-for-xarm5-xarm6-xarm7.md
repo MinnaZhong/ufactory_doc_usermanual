@@ -4,7 +4,7 @@ xArm5,xArm6,xArm7的控制器是相互兼容的，每个手臂都配有一个控
 
 下面是更新版本的操作步骤：
 
-1. 下载软件[xarm-tool-gui](https://share.weiyun.com/yEmDjxq1)和最新的[离线安装包](https://share.weiyun.com/y9NqMVAW)
+1. 下载[GUI工具和软件/固件离线包](http://update.ufactory.cc/xArmTool-x86.zip)
 
 2. 打开该软件后，点击“连接”。连接之后，如果手臂是xarm5，那么需要在类型中选择‘xarm5-type5' （其他轴数以此类推）。然后点击离线安装。
 

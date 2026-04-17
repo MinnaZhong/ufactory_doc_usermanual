@@ -23,7 +23,7 @@
 
 
 ## 下载
-[xarm-tool-gui-win-amd64-2.17.14](https://update.ufactory.cc/xarm-tool-gui-2.17.14.zip)
+[xarm-tool-gui-win-amd64-2.17.14](http://update.ufactory.cc/xarm-tool-gui-2.17.14.zip)
 
 ## 升级提示
 
